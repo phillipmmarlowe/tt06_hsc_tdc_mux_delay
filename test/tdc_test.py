@@ -12,7 +12,7 @@ async def test_tdc(dut):
     gates = os.environ['GATES']
     
     # May need to set this lower for faster delay line cells
-    theta_step_ps = 10
+    theta_step_ps = 100
 
     # Remember to set the clock rate
     tdc_ctrl = TDCTestUtility(
