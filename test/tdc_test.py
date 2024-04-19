@@ -16,9 +16,9 @@ async def test_tdc(dut):
 
     # Remember to set the clock rate
     tdc_ctrl = TDCTestUtility(
-        clk_period_ns=15.15, 
+        clk_period_ns=25, 
         dut=dut, 
-        dl_cell="sky130_fd_sc_hd__mux2_1",
+        dl_cell="sky130_fd_sc_hd__mux2_4",
         meas_start="PULSE RISING",
         is_inverted=False
     )
