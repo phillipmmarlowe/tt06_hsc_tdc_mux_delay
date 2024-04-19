@@ -6,7 +6,7 @@ Description: Create a delay line using vmacros
      Author: Tyler Sheaves (@tsheaves)
      Editted by Phillip Marlowe (@phillipmmarlowe)
 */
-`timescale 1ns/1ps
+// `timescale 1ns/1ps
 module delay_line #(
     parameter N=64,
     parameter DL_TYPE="RCA"
