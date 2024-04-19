@@ -41,12 +41,12 @@ logic
     val_out;
 
 generate
-    if(N_o+1 == 7) begin
+    if(N_o+1 == 7) begin : genblk_uout_full
         always@(*) begin
             uo_out[N_o:0] = hw;
             uo_out[7] = val_out;
         end
-    end else if(N_o+1 < 7) begin
+    end else if(N_o+1 < 7) begin : genblk_uout_unused
         always@(*) begin
             uo_out[6:N_o+1] = {6-N_o{1'b0}}; 
             uo_out[N_o:0] = hw;

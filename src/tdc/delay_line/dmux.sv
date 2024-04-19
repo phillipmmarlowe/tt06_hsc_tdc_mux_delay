@@ -63,15 +63,15 @@ module dmux #(parameter WIDTH=32) (
 	(* keep *) wire [WIDTH-1:0] lo_int;
 	(* keep *) wire [WIDTH-1:0] hi_int;
 	
-	const_zeros #(.N(WIDTH)) zeros(
+	const_zeros #(.N(WIDTH)) u_zeros(
         .zeros(lo_int)
     );
 	
-	const_ones #(.N(WIDTH)) ones(
+	const_ones #(.N(WIDTH)) u_ones(
         .ones(hi_int)
     );
 	
-    assign meas_o = ffout_w;
+    assign meas_o = ffout_w[WIDTH-1:0];
     assign ffout_w[0] = pulse_i;
 
 	generate 

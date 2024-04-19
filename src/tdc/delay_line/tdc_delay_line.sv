@@ -17,30 +17,30 @@ module delay_line #(
 	
     generate
 	    case(DL_TYPE)
-		    "RCA": begin : dl_genblk
-                //(* keep *) logic 
-                    //keep_co;
-			    rca_dl #(.WIDTH(N)) dl (
-			          .pulse(in),
-                      .meas(dl_out)
-			    );
-            	end
-		    "DAND": begin : dl_genblk
-		         //(* keep *) logic
-                     //keep_co;
-                 dand #(.WIDTH(N)) dl (
-			          .pulse_i(in),
-                      .meas_o(dl_out)
-			     );
-                 end
-			"DBUF": begin : dl_genblk
-		         //(* keep *) logic
-                     //keep_co;
-                 dbuf #(.WIDTH(N)) dl (
-			          .pulse_i(in),
-                      .meas_o(dl_out)
-			     );
-                 end
+		    // "RCA": begin : dl_genblk
+            //     //(* keep *) logic 
+            //         //keep_co;
+			//     rca_dl #(.WIDTH(N)) dl (
+			//           .pulse(in),
+            //           .meas(dl_out)
+			//     );
+            // 	end
+		    // "DAND": begin : dl_genblk
+		    //      //(* keep *) logic
+            //          //keep_co;
+            //      dand #(.WIDTH(N)) dl (
+			//           .pulse_i(in),
+            //           .meas_o(dl_out)
+			//      );
+            //      end
+			// "DBUF": begin : dl_genblk
+		    //      //(* keep *) logic
+            //          //keep_co;
+            //      dbuf #(.WIDTH(N)) dl (
+			//           .pulse_i(in),
+            //           .meas_o(dl_out)
+			//      );
+            //      end
 			"DMUX": begin : dl_genblk
 		         //(* keep *) logic
                      //keep_co;

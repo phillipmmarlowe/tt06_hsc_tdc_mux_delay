@@ -15,6 +15,7 @@ src/resynth_rename
 runs
 tt_submission
 src/user_config.tcl
+src/pkg
 src/dummy_macro/lef/tt_*
 src/dummy_macro/Deprecated*
 test/sim_build
@@ -35,5 +36,5 @@ test/tdc_vcd_to_json.py
 test/test_git.py
 test/test_local.py
 test/test_rtl.py
-test/test_old
+test_old/
 tt/
