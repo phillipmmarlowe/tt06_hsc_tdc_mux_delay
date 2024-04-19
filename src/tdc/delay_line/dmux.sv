@@ -6,8 +6,7 @@ Description: Guaranteed to be an and chain independent of inputs
      Author: Phillip Marlowe (@phillipmmarlowe)
 */
 //4.14
-`define MUX_CELL sky130_fd_sc_hd__mux2_1  
-`timescale 1ns/1ps
+`define MUX_CELL sky130_fd_sc_hd__mux2_4
 
 /*
 module const_ones #(parameter N=64) (
@@ -60,7 +59,7 @@ module dmux #(parameter WIDTH=32) (
 	output [WIDTH-1:0]	meas_o
 );
     
-	(* keep *) wire [WIDTH-1:0] ffout_w;
+	(* keep *) wire [  WIDTH:0] ffout_w;
 	(* keep *) wire [WIDTH-1:0] lo_int;
 	(* keep *) wire [WIDTH-1:0] hi_int;
 	
@@ -73,15 +72,16 @@ module dmux #(parameter WIDTH=32) (
     );
 	
     assign meas_o = ffout_w;
-	
+    assign ffout_w[0] = pulse_i;
+
 	generate 
 		genvar i;
 		for(i=0; i<WIDTH; i=i+1) begin : dmux_genblk
 		    `MUX_CELL DM ( 
-                .X(ffout_w[i]), 
+                .X(ffout_w[i+1]), 
                 .A0(lo_int[i]), 
                 .A1(hi_int[i]),
-				.S(pulse_i)
+				.S(ffout_w[i])
                 `ifdef USE_POWER_PINS
                     , .VGND(VGND)
                     , .VPWR(VPWR)

@@ -5,9 +5,8 @@
 Description: Guaranteed to be an adder independent of inputs
      Author: Tyler Sheaves (@tsheaves)
 */
-`define FA_CELL sky130_fd_sc_hd__fa_2 
-// `timescale 1ns/1ps
-/*
+`define FA_CELL sky130_fd_sc_hd__fa_2
+
 (* techmap_celltype = "$fa" *)
 module fa_fixed(A, B, C, X, Y);
 	parameter WIDTH = 1;
@@ -37,7 +36,7 @@ module fa_fixed(A, B, C, X, Y);
     );
 
 endmodule
-*/
+
 module const_ones #(parameter N=64) (
     output [N-1:0] ones
 );

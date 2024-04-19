@@ -6,8 +6,7 @@ Description: Guaranteed to be a buffer chain independent of inputs
      Author: Phillip Marlowe (@phillipmmarlowe)
 */
 //1.38
-`define BUF_CELL sky130_fd_sc_hd__buf_1  
-`timescale 1ns/1ps
+`define BUF_CELL sky130_fd_sc_hd__buf_1
 
 module dbuf #(parameter WIDTH=32) ( 
 	input 			    pulse_i,
