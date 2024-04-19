@@ -105,7 +105,7 @@ generate
     for(j=1; j<=N_SYNC; j=j+1) begin : genblk_val_out
         always_ff@(posedge clk_capture)
             if(rst)
-                val_out_sync_r[j] <= {N{1'b0}};
+                val_out_sync_r[j] <= 1'b0;
             else if(en)
                 val_out_sync_r[j] <= val_out_sync_r[j-1];
     end

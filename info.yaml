@@ -1,11 +1,11 @@
 # Tiny Tapeout project information - HSCTDC_FA2 
 project:
-  title:        "UCSC HW Systems Collective, TDC"
+  title:        "UCSC HW Systems Collective, TDC - MUX2x1"
   author:       "Phillip Marlowe, Tyler Sheaves, & Dustin Richmond"
   discord:      "breachdat"
-  description:  "A tiny TDC constructed entirely of standard cells. Skywater130 AND-2 delay element"
+  description:  "A tiny TDC constructed entirely of standard cells. Skywater130 MUX2x1 delay element"
   language:     "SystemVerilog"                                                          
-  clock_hz:      17241379
+  clock_hz:      25000000
 
   tiles: "1x2"
 
@@ -16,10 +16,8 @@ project:
     - "tdc/tdc_top.sv"
     - "tdc/pulse_gen/tdc_pg.sv"
     - "tdc/delay_line/tdc_delay_line.sv"
-    - "tdc/delay_line/rca.sv"
-    - "tdc/delay_line/dand.sv"
-    - "tdc/delay_line/dbuf.sv"
     - "tdc/delay_line/dmux.sv"
+    - "tdc/delay_line/conb_cells.sv"
     - "tdc/reg/capture_reg.sv"
     - "tdc/pop_count/pop_count_simple.sv"
 

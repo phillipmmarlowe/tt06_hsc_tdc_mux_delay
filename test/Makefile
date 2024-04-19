@@ -16,9 +16,7 @@ PROJECT_SOURCES = \
     tt_um_hsc_tdc.sv \
     tdc/tdc_top.sv \
     tdc/delay_line/tdc_delay_line.sv \
-    tdc/delay_line/rca.sv \
-	tdc/delay_line/dand.sv \
-	tdc/delay_line/dbuf.sv \
+    tdc/delay_line/conb_cells.sv \
 	tdc/delay_line/dmux.sv \
     tdc/pop_count/pop_count_simple.sv \
     tdc/pulse_gen/tdc_pg.sv \
